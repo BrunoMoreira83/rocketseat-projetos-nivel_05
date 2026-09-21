@@ -1,0 +1,14 @@
+# pylint: disable=missing-docstring
+# pylint: disable=too-few-public-methods
+from sqlalchemy import Column, BIGINT, String
+from src.models.sqllite.settings.base import Base
+
+class PetsTable(Base):
+    __tablename__ = "pets"
+
+    id = Column(BIGINT, primary_kay=True)
+    name = Column(String, nullable=False)
+    type = Column(String, nullable=False)
+
+    def __repr__(self):
+        return f"Pets [name={self.name}, type={self.type}]"
