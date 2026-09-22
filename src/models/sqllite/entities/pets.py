@@ -6,7 +6,7 @@ from src.models.sqllite.settings.base import Base
 class PetsTable(Base):
     __tablename__ = "pets"
 
-    id = Column(BIGINT, primary_kay=True)
+    id = Column(BIGINT, primary_key=True)
     name = Column(String, nullable=False)
     type = Column(String, nullable=False)
 
