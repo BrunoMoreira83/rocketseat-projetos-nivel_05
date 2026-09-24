@@ -1,16 +1,16 @@
 # pylint: disable=missing-docstring
 # pylint: disable=too-few-public-methods
-from sqlalchemy import Column, BIGINT, String
+from sqlalchemy import Column, BIGINT, String, ForeignKey
 from src.models.sqllite.settings.base import Base
 
 class PeopleTable(Base):
     __tablename__ = "people"
 
-    id = Column(BIGINT, primary_kay=True)
+    id = Column(BIGINT, primary_key=True)
     first_name = Column(String, nullable=False)
     last_name = Column(String, nullable=False)
     age = Column(BIGINT, nullable=False)
-    pet_id = Column(BIGINT, Foreignkey="pets.id")
+    pet_id = Column(BIGINT, ForeignKey("pets.id"))
 
     def __repr__(self):
         return (
