@@ -8,6 +8,8 @@ disable =
       C0209,
       E0015,
       C0321,
+      W0719, # Raising too general exception: Exception (broad-exception-raised)
+      R0903, # Too few public methods (1/2) (too-few-public-methods)
 
 # Analyse import fallback blocks. This can be used to support both Python 2 and
 # 3 compatible code, which means that the block might have code that exists
